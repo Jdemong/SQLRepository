@@ -1,0 +1,37 @@
+/*Designing a store database*/
+/*Creating the database for a store*/
+
+CREATE TABLE coffeestore (
+    id INTEGER,
+    item TEXT,
+    stock INTEGER,
+    price INTEGER,
+    cost INTEGER
+);
+
+/*inserting items into the database*/
+INSERT INTO coffeestore (id, item, stock, price, cost)
+VALUES
+(1,"small coffee",30,1.60,0.50),
+(2,"medium coffee",30,1.75,0.55),
+(3,"large coffee",30,1.90,0.60),
+(4,"small latte",10,2.90,.75),
+(5,"medium latte",10,3.00,0.80),
+(6,"large latte",10,3.10,0.85),
+(7,"small cappucino ",5,2.90,0.75),
+(8,"medium cappucino",5,3.00,0.80),
+(9,"large cappucino",5,3.10,0.85),
+(10,"small iced coffee",15,1.75,0.5),
+(11,"medium iced coffee",15,1.90,0.55),
+(12,"large iced coffee",15,2.00,0.60),
+(13,"small cold brew",20,2.90,0.75),
+(14,"medium cold brew",20,3.00,0.80),
+(15,"large cold brew",20,3.15,0.85);
+
+/*Showing the items listed in descending price value*/
+
+SELECT * FROM coffeestore
+ORDER BY price DESC;
+
+/*showing the gross profit per item*/
+SELECT *, (price-cost) AS Gross_Profit FROM coffeestore
