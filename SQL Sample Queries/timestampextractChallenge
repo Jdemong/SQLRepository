@@ -1,0 +1,8 @@
+SELECT DISTINCT TO_CHAR(payment_date, 'Month') AS payment_month
+FROM payment
+GROUP BY payment_date;
+
+SELECT COUNT(payment_date)
+FROM payment
+WHERE TO_CHAR(payment_date,'dy') = 'mon';
+WHERE EXTRACT(dow FROM payment_date) = 1;

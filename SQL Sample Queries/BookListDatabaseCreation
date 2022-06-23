@@ -1,0 +1,13 @@
+/*Creating a database table to store books */
+CREATE TABLE booklist (
+    id INTEGER,
+    name TEXT,
+    rating INTEGER
+)
+
+/* Add data points into the database */
+INSERT INTO booklist (id,name,rating)
+VALUES
+(1, "lying", 5),
+(2,"Steve Jobs",5),
+(3,"Merchants of Doubt",5)
