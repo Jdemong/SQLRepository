@@ -1,0 +1,43 @@
+/* What does the app's SQL look like? */
+
+/*creating a SQL database of fitness information*/
+
+CREATE TABLE fitness (
+    id INTEGER PRIMARY KEY,
+    date TEXT,
+    calories_in INTEGER,
+    steps INTEGER,
+    weight INTEGER,
+    exercise_min INTEGER,
+    exercise_type TEXT
+);
+
+
+/* Adding data points to the database*/
+INSERT INTO fitness (date,calories_in,steps,weight,exercise_min,exercise_type)
+VALUES
+("01-01-2022",2100,12721,154,65,"weightlifting"),
+("01-01-2022",2070,12721,154,65,"weightlifting"),
+("01-02-2022",2000,10100,153,50,"running"),
+("01-03-2022",2050,11200,154,55,"weightlifting");
+
+/*view the database*/
+SELECT * FROM fitness;
+
+/*calories in needs to be updated*/
+
+UPDATE fitness
+SET calories_in=2150
+WHERE calories_in=2100;
+
+/*view the updated database*/
+SELECT * FROM fitness;
+
+/*delete the duplicate date entry*/
+DELETE FROM fitness
+WHERE id =2;
+
+/*view and check the updated database*/
+SELECT * FROM fitness;
+
+
